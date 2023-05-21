@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="HomePage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav id="example-1">
+        <ul>
+            <li><a href="file:///C:/Users/Emad-PC/Desktop/Retail%20New/HomePage1.html">Home Page</a></li>
+            <li><a href="file:///C:/Users/Emad-PC/Desktop/Retail%20New/CampimgEquipment1.html">Camping Equipment</a></li>
+            <li><a href="file:///C:/Users/Emad-PC/Desktop/Retail%20New/Furniture1.html">Furniture</a></li>
+            <li><a href="file:///C:/Users/Emad-PC/Desktop/Retail%20New/Reviews1.html">Reviews</a></li>
+            <li><a href="file:///C:/Users/Emad-PC/Desktop/Retail%20New/Basket1.html">Basket</a></li>
+            <li><a href="file:///C:/Users/Emad-PC/Desktop/Retail%20New/Offers1.html">Offers And Packages</a></li>
+        </ul>
+    </nav>
+
+    <!-- end of nav bar code -->
+    <!--Headers -->
+    <center><h2 style="font-family:'Bookman Old Style'">Retail Camping Company </h2></center>
+    <center><h4 style="font-family:'Trebuchet MS'">Adventure is calling! Shop our reliable outdoor camping gear and equipment that was designed with you in mind!</h4></center>
+    <center><h4 style="font-family:'Segoe Script'"><span style="background:Gold; ">Start the journey now!</span></h4></center>
+    <center><h3>____________________________________________________________________________________________________________________________</h3></center>
+    <br /><br /><br />
+    <center><p style="font-family:Consolas">Our company is very keen to provide the luxurious and best camping equipment! <br /> here you will find everything you need to have an unforgettable camping experience!</p></center>
+    <br /><br /><br />
+    <!--end of headers code-->
+    <!-- Pop Up -->
+    <button id="myBtn">Press on me!</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4> Dear Customer...</h4>
+            </div>
+            <div class="modal-body">
+                <p> We offer refund within the first 8 days of your purchase, after that the return request will not be accepted.</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Thanks for your cooperation.</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var modal = document.getElementById("myModal");
+
+
+        var btn = document.getElementById("myBtn");
+
+
+        var span = document.getElementsByClassName("close")[0];
+
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <!--slideshow-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="slide5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="slide6.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="slide8.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script> <br />
+    <!--end of slideshow code-->
+    <br /><br /><br />
+    <p>_____________________________________________________________________________________________________________________________________________________________________________________</p>
+    <br />
+    <!-- Video Plugin -->
+    <center>
+        <video src="Camping.mp4" width="1000" height="975" controls></video>
+        <h4 style="font-family:'Segoe Script'">so live life passionately without regrets!</h4>
+    </center>
+    <br /><br /><br /><br />
+
+
+    <!-- Social Media Acc -->
+    <center><h5 style="font-family:'Bookman Old Style'">Follow Our Social Media Accounts</h5></center>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+
+    <!-- End of Social media acc code -->
+    <!-- foooter-->
+    <br /><br />
+    <footer>
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h2>Our Company</h2>
+                    <ul>
+                        <li>Retail Camping Company</li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Our Products</h2>
+                    <ul>
+                        <li>All camping equipment and furniture </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Our Team</h2>
+                    <ul>
+                        <li>HR Team</li>
+                        <li>Finance Team</li>
+                        <li>Content Team</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li>+971 56 201 2388</li>
+                        <li>areej.k.emad@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col address">
+                    <h2>Our Address </h2>
+                    <ul>
+                        <li>UAE - Dubai </li>
+                        <li>Dubai Academic City </li>
+                        <li>Block 10 - floor 8</li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+</body>
+
+
+
+</html>
